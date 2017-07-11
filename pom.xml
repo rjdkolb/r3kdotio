@@ -85,16 +85,6 @@
                         </configuration>
                     </execution>
                     <execution>
-                        <id>webpack build test</id>
-                        <goals>
-                            <goal>yarn</goal>
-                        </goals>
-                        <phase>test</phase>
-                        <configuration>
-                            <arguments>run webpack:test</arguments>
-                        </configuration>
-                    </execution>
-                    <execution>
                         <id>webpack build prod</id>
                         <goals>
                             <goal>yarn</goal>
@@ -112,12 +102,12 @@
                 <executions>
                     <execution>
                         <id>public</id>
-                        <phase>package</phase>
+                        <phase>prepare-package</phase>
                         <goals>
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${basedir}/target/classes/static/</outputDirectory>
+                            <outputDirectory>${basedir}/src/main/resources/static/</outputDirectory>
                             <resources>
                                 <resource>
                                     <directory>src/main/frontend/build/</directory>
