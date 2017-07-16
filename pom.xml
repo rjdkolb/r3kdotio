@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.r3kdotio</groupId>
-    <artifactId>springbootreactjs-starter</artifactId>
+    <artifactId>io.r3k.r3kdotio</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>springbootreactjs-starter</name>
+    <name>r3kdotio</name>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -124,10 +124,10 @@
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>0.4.14</version>
                 <configuration>
-                    <imageName>r3kdotio/${project.artifactId}</imageName>
+                    <imageName>r3kdotio/r3kdotio</imageName>
 
                     <baseImage>anapsix/alpine-java:8_server-jre_unlimited</baseImage>
-                    <entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
+                    <entryPoint>["java", "-jar","-Djdk.tls.ephemeralDHKeySize=2048", "/${project.build.finalName}.jar"]</entryPoint>
                     <!-- copy the service's jar file from target into the root directory of the image --> 
                     <resources>
                         <resource>
