@@ -1,7 +1,9 @@
 # Description
 r³k.io
 
-##SSL
+https://r3k.io
+
+## SSL
 - Setup SSL using: https://letsencrypt.org/
 - https://certbot.eff.org/
 - openssl pkcs12 -export -out keystore.p12 -inkey privkey.pem -in fullchain.pem
