@@ -5,7 +5,8 @@ import Sidebar from '../../components/Sidebar/';
 import Breadcrumb from '../../components/Breadcrumb/';
 import Aside from '../../components/Aside/';
 import Footer from '../../components/Footer/';
-
+//--
+import Tabs from '../../views/Tabs/'
 import Dashboard from '../../views/Dashboard/'
 
 class Full extends Component {
@@ -20,7 +21,8 @@ class Full extends Component {
             <div className="container-fluid">
               <Switch>
                 <Route path="/dashboard" name="Dashboard" component={Dashboard}/>
-                <Redirect from="/" to="/dashboard"/>
+                <Route path="/tabs" name="Tabs" component={Tabs}/>
+               
               </Switch>
             </div>
           </main>
